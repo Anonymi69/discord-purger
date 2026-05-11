@@ -22,13 +22,11 @@ https://github.com/Anonymi69/discord-purger/releases
 Or you can run the project directly using Python.
 
 ---
+## 📽️Video Tutorial
 
-## 🔗 Repository
-
-https://github.com/Anonymi69/discord-purger
+https://github.com/user-attachments/assets/91bce771-8643-4115-ab7f-a6de73d50d55
 
 ---
-
 ## 🚀 Installation & Usage
 
 ### Clone the repository
