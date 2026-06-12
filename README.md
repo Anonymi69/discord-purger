@@ -1,6 +1,6 @@
 # Discord DM Purger
 
-A simple tool to purge/delete your Discord DMs quickly and efficiently.
+A clean, privacy-focused tool to delete your own Discord DMs quickly and efficiently.
 
 ---
 
@@ -8,41 +8,53 @@ A simple tool to purge/delete your Discord DMs quickly and efficiently.
 
 Use this tool **at your own risk**.
 
-Automating actions on Discord may violate Discord's Terms of Service.  
+Automating actions on Discord may violate Discord's Terms of Service.
 The author is **not responsible** for any account restrictions, bans, data loss, or other consequences resulting from the use of this project.
 
 ---
 
-## 📥 Download
+## 🔐 How Authentication Works
 
-You can download the prebuilt executable from the **Releases** tab:
+This version **does not extract, scan, or auto-detect tokens** in any way.
 
-https://github.com/Anonymi69/discord-purger/releases
+When you open the app, you are presented with a login screen where you manually paste your own Discord user token. The token is:
 
-Or you can run the project directly using Python.
-
----
-## 📽️Video Tutorial
-
-https://github.com/user-attachments/assets/91bce771-8643-4115-ab7f-a6de73d50d55
+- Always masked on screen (never shown in plaintext)
+- Blocked from being copied or cut via keyboard or right-click
+- Validated directly against Discord's API before the app proceeds
+- Never stored, logged, or written to disk
 
 ---
+
 ## 🚀 Installation & Usage
 
-### Clone the repository
+### Requirements
+
+- **Python 3.10 or newer** — [Download Python](https://www.python.org/downloads/)
+- An internet connection
+
+> There are no prebuilt executables or releases. You run the tool directly from source using Python.
+
+---
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Anonymi69/discord-purger.git
+```
+```bash
 cd discord-purger
 ```
 
-### Install dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run the program
+> Dependencies (`PyQt6`, `requests`, `Pillow`) are also auto-installed on first run if missing.
+
+### 3. Run the program
 
 ```bash
 python main.py
@@ -50,17 +62,29 @@ python main.py
 
 ---
 
-## 🛠 Requirements
+## 🖥️ How to Use
 
-- Python 3.10 or newer
-- Internet connection
+1. **Get your token** — Open Discord in a browser, open DevTools (`F12`), go to the Network tab, send any message, and find the `Authorization` header in the request.
+2. **Paste it** into the token field on the login screen and click **Validate & Continue**.
+3. Once validated, your account info and DM list will load automatically.
+4. **Select** the conversations you want to purge (individually or all at once).
+5. Set a **delay** between deletions (default 0.8s — lower values increase rate-limit risk).
+6. Click **▶ Start Purge** and monitor the activity log.
+
+---
+
+## 📽️ Video Tutorial
+
+<!-- Paste your video below — drag and drop an .mp4 into this file on GitHub, or paste a link -->
 
 ---
 
 ## 📌 Notes
 
-- Use responsibly and avoid excessive requests to Discord APIs.
-- If Windows Defender flags the executable, you may need to whitelist it manually depending on your build settings.
+- Only your own messages are deleted — you cannot delete messages sent by others.
+- Deleted messages cannot be recovered.
+- Using very low delay values increases the chance of being rate-limited by Discord.
+- The activity log shows every deletion in real time.
 
 ---
 
