@@ -75,7 +75,7 @@ python main.py
 
 ## 📽️ Video Tutorial
 
-<!-- Paste your video below — drag and drop an .mp4 into this file on GitHub, or paste a link -->
+https://youtu.be/8kXcktKwL74
 
 ---
 
